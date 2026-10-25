@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Betanika | Kwiatomat 24/7 Siemianowice Śląskie</title>
-  <meta name="description" content="Betanika – świeże bukiety dostępne 24/7 w kwiatomacie przy ul. Śląskiej 45 w Siemianowicach Śląskich.">
+  <title>Betanika | Kwiatomaty 24/7 – Siemianowice Śląskie i Katowice Airport</title>
+  <meta name="description" content="Betanika – świeże bukiety dostępne 24/7 w Siemianowicach Śląskich oraz na Katowice Airport w Pyrzowicach, Terminal C – hala przylotów.">
   <meta name="theme-color" content="#171717">
 
   <link rel="canonical" href="https://betanika.pl/">
@@ -13,32 +13,49 @@
   <link rel="apple-touch-icon" href="logo.jpeg">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Betanika – Kwiatomat 24/7">
-  <meta property="og:description" content="Świeże bukiety 24/7 przy ul. Śląskiej 45 w Siemianowicach Śląskich.">
+  <meta property="og:title" content="Betanika – Kwiatomaty 24/7">
+  <meta property="og:description" content="Świeże bukiety 24/7 w Siemianowicach Śląskich i na Katowice Airport w Pyrzowicach.">
   <meta property="og:url" content="https://betanika.pl/">
   <meta property="og:image" content="https://betanika.pl/hero.jpeg">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Florist",
+    "@type": "Organization",
     "name": "Betanika",
     "url": "https://betanika.pl/",
-    "telephone": "+48 516 607 478",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ul. Śląska 45",
-      "addressLocality": "Siemianowice Śląskie",
-      "addressCountry": "PL"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    }]
+    "telephone": "+48 780 717 944",
+    "sameAs": [
+      "https://www.facebook.com/betanika.kwiatomaty/",
+      "https://www.instagram.com/betanika.kwiatomaty/"
+    ],
+    "department": [
+      {
+        "@type": "Florist",
+        "name": "Betanika Kwiatomat 24/7 – Siemianowice Śląskie",
+        "telephone": "+48 780 717 944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Śląska 45",
+          "addressLocality": "Siemianowice Śląskie",
+          "addressCountry": "PL"
+        },
+        "openingHours": "Mo-Su 00:00-23:59"
+      },
+      {
+        "@type": "Florist",
+        "name": "Betanika Kwiatomat 24/7 – Katowice Airport",
+        "telephone": "+48 780 717 944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Wolności 90, Terminal C – hala przylotów",
+          "addressLocality": "Ożarowice",
+          "postalCode": "42-625",
+          "addressCountry": "PL"
+        },
+        "openingHours": "Mo-Su 00:00-23:59"
+      }
+    ]
   }
   </script>
 
@@ -122,7 +139,7 @@
       text-align:center;
       background:
         linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.64)),
-        url("Kwiatomat zdjęcie w tle.png") center/cover no-repeat;
+        url("kwiatomat-tlo.jpg") center/cover no-repeat;
     }
     .hero::after{
       content:"";
@@ -271,7 +288,7 @@
     }
     .spotlight-photo{
       min-height:520px;
-      background:url("hero.jpeg") center/cover no-repeat;
+      background:url("lotnisko-kwiatomat-terminal-c.jpg") center/cover no-repeat;
     }
     .spotlight-copy{
       display:flex;
@@ -327,6 +344,52 @@
       margin-top:20px;
       font-size:14px;
     }
+    .location-gallery-head{margin-top:76px}
+    .location-gallery{grid-template-columns:repeat(4,1fr)}
+
+    .blog-preview{background:#fff}
+    .blog-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    .blog-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--paper);
+      box-shadow:0 8px 28px rgba(0,0,0,.035);
+    }
+    .blog-card img{
+      width:100%;
+      aspect-ratio:16/10;
+      object-fit:cover;
+      display:block;
+    }
+    .blog-card-copy{padding:26px}
+    .blog-card .kicker{
+      display:block;
+      margin-bottom:10px;
+      color:#8a8179;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .blog-card h3{
+      margin-bottom:12px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:27px;
+      line-height:1.12;
+      font-weight:400;
+    }
+    .blog-card p{color:var(--muted)}
+    .blog-card a{
+      display:inline-block;
+      margin-top:18px;
+      font-weight:700;
+      text-underline-offset:4px;
+    }
 
     .location{
       background:#181818;
@@ -334,15 +397,44 @@
     }
     .location-grid{
       display:grid;
-      grid-template-columns:.88fr 1.12fr;
-      gap:34px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
       align-items:stretch;
+    }
+    .location-head{
+      grid-column:1/-1;
+      max-width:760px;
+      margin:0 auto 22px;
+      text-align:center;
+    }
+    .location-head .kicker{
+      display:block;
+      margin-bottom:10px;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      font-size:12px;
+      color:#bcb7b1;
+    }
+    .location-head h2{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(38px,5vw,56px);
+      line-height:1.04;
+      font-weight:400;
+    }
+    .location-card{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:26px;
+      background:#222;
     }
     .location-copy{
       display:flex;
       flex-direction:column;
       justify-content:center;
-      padding:20px 6px;
+      flex:1;
+      padding:32px;
     }
     .location-copy .kicker{
       text-transform:uppercase;
@@ -361,6 +453,27 @@
     .address{
       font-size:22px;
       margin-bottom:8px;
+    }
+    .address strong{
+      display:inline-block;
+      margin-bottom:6px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:30px;
+      line-height:1.12;
+      font-weight:400;
+    }
+    .new-location{
+      display:inline-flex;
+      width:max-content;
+      margin-bottom:18px;
+      padding:6px 11px;
+      border-radius:999px;
+      background:#fff;
+      color:#181818;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
     }
     .open247{
       color:#c9c5c0;
@@ -391,9 +504,46 @@
       font-size:clamp(38px,6vw,58px);
       text-decoration:none;
     }
-    .fb{
-      color:var(--muted);
-      font-size:17px;
+    .social-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:14px;
+    }
+    .social-link{
+      display:inline-flex;
+      min-height:48px;
+      padding:0 20px;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--paper);
+      font-weight:700;
+      text-decoration:none;
+      transition:transform .2s ease,background .2s ease;
+    }
+    .social-link:hover,.social-link:focus-visible{
+      transform:translateY(-2px);
+      background:#f1ede7;
+    }
+    .social-link svg{
+      width:20px;
+      height:20px;
+      fill:currentColor;
+    }
+    .footer-socials{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      margin-top:8px;
+    }
+    .footer-socials a{
+      color:#4f4a45;
+      font-weight:700;
+      text-underline-offset:4px;
     }
 
     footer{
@@ -451,7 +601,9 @@
       .spotlight-photo{min-height:390px}
       .spotlight-copy{padding:34px 26px}
       .gallery{grid-template-columns:repeat(2,1fr);gap:8px}
+      .location-gallery{grid-template-columns:repeat(2,1fr)}
       .gallery button{border-radius:12px}
+      .blog-grid{grid-template-columns:1fr}
       .location-grid{grid-template-columns:1fr}
       .map,.map iframe{min-height:360px}
       footer{padding-bottom:96px}
@@ -502,8 +654,9 @@
       <div class="navlinks">
         <a href="#jak">Jak to działa</a>
         <a href="#galeria">Bukiety</a>
-        <a href="#lokalizacja">Lokalizacja</a>
-        <a class="navcall" href="tel:+48516607478">516 607 478</a>
+        <a href="#lokalizacja">Lokalizacje</a>
+        <a href="blog/">Poradnik</a>
+        <a class="navcall" href="tel:+48780717944">780 717 944</a>
       </div>
     </div>
   </nav>
@@ -514,7 +667,7 @@
         <img src="logo.jpeg" alt="Logo Betanika">
       </div>
 
-      <span class="eyebrow">Kwiatomat 24/7 · Siemianowice Śląskie</span>
+      <span class="eyebrow">Kwiatomaty 24/7 · Dwie lokalizacje</span>
       <h1>Kwiaty wtedy,<br>kiedy ich potrzebujesz.</h1>
 
       <p class="hero-lead">
@@ -522,15 +675,11 @@
         prezent albo po prostu bez okazji.
       </p>
 
-      <p class="hero-address">ul. Śląska 45 · Siemianowice Śląskie</p>
+      <p class="hero-address">Siemianowice Śląskie · Katowice Airport, Pyrzowice</p>
 
       <div class="actions">
-        <a class="btn btn-light"
-           href="https://www.google.com/maps/search/?api=1&query=Śląska+45,+Siemianowice+Śląskie"
-           target="_blank" rel="noopener">
-          Jak dojechać
-        </a>
-        <a class="btn btn-ghost" href="tel:+48516607478">Zadzwoń</a>
+        <a class="btn btn-light" href="#lokalizacja">Zobacz lokalizacje</a>
+        <a class="btn btn-ghost" href="tel:+48780717944">Zadzwoń</a>
       </div>
     </div>
   </header>
@@ -550,7 +699,7 @@
         <article class="step">
           <div class="step-num">1</div>
           <h3>Przyjedź</h3>
-          <p>Znajdziesz nas przy ul. Śląskiej 45 w Siemianowicach Śląskich.</p>
+          <p>Wybierz punkt w Siemianowicach Śląskich albo na Katowice Airport w Pyrzowicach.</p>
         </article>
 
         <article class="step">
@@ -571,13 +720,13 @@
   <section class="spotlight">
     <div class="container">
       <div class="spotlight-card">
-        <div class="spotlight-photo" role="img" aria-label="Kwiatomat Betanika z bukietami"></div>
+        <div class="spotlight-photo" role="img" aria-label="Kwiatomat Betanika w Terminalu C na Katowice Airport"></div>
         <div class="spotlight-copy">
-          <span>Betanika 24/7</span>
-          <h2>Jeden kwiatomat. Zawsze pod ręką.</h2>
+          <span>Nowość · Katowice Airport</span>
+          <h2>Dwa kwiatomaty. Zawsze pod ręką.</h2>
           <p>
-            Oferta w witrynie zmienia się na bieżąco. Dzięki temu możesz po prostu
-            podjechać i wybrać bukiet, który najbardziej Ci odpowiada.
+            Betanikę znajdziesz teraz także w Terminalu C, w hali przylotów.
+            Wybierz bukiet od razu po przylocie lub gdy czekasz na bliską osobę.
           </p>
         </div>
       </div>
@@ -593,6 +742,12 @@
       </div>
 
       <div class="gallery">
+        <button type="button"><img src="lotnisko-bukiet-czerwone-roze-jasne-tlo.jpg" alt="Bukiet czerwonych róż dostępny w kwiatomacie Betanika" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-bukiet-slonecznik-i-gozdziki-jasne-tlo.jpg" alt="Kolorowy bukiet ze słonecznikiem i goździkami w kwiatomacie" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-bukiet-slonecznik-jasne-tlo.jpg" alt="Bukiet ze słonecznikiem dostępny w kwiatomacie Betanika" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-bukiet-lilie-i-gerbery-jasne-tlo.jpg" alt="Różowy bukiet z liliami i gerberami w kwiatomacie Betanika" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-bukiet-fioletowy-jasne-tlo.jpg" alt="Fioletowy bukiet z różami i zielenią w kwiatomacie Betanika" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-bukiet-rozowe-chryzantemy-jasne-tlo.jpg" alt="Różowy bukiet z chryzantemami dostępny 24/7" loading="lazy"></button>
         <button type="button"><img src="1.jpeg" alt="Bukiet Betanika 1" loading="lazy"></button>
         <button type="button"><img src="2.jpeg" alt="Bukiet Betanika 2" loading="lazy"></button>
         <button type="button"><img src="3.jpeg" alt="Bukiet Betanika 3" loading="lazy"></button>
@@ -605,40 +760,115 @@
       </div>
 
       <p class="gallery-note">Zdjęcia przedstawiają przykładowe realizacje. Aktualna oferta zależy od dostępności.</p>
+
+      <div class="section-head location-gallery-head">
+        <span class="kicker">Katowice Airport</span>
+        <h2>Zobacz kwiatomat w Terminalu C</h2>
+        <p>Nowy punkt Betaniki znajduje się w hali przylotów i jest dostępny przez całą dobę.</p>
+      </div>
+
+      <div class="gallery location-gallery">
+        <button type="button"><img src="lotnisko-kwiatomat-24h-wejscie.jpg" alt="Kwiatomat Betanika 24/7 przy wejściu do Terminalu C na Katowice Airport" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-kwiatomat-betanika.jpg" alt="Betanika Kwiatomat 24/7 w Terminalu C" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-kwiatomat-front.jpg" alt="Kwiatomat Betanika z bukietami na Katowice Airport" loading="lazy"></button>
+        <button type="button"><img src="lotnisko-kompozycja-z-misiem.jpg" alt="Kompozycja kwiatowa z misiem w Betanice" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-preview" id="poradnik">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Poradnik Betaniki</span>
+        <h2>Kwiaty pod ręką i na właściwą okazję</h2>
+        <p>Praktyczne wskazówki o zakupie bukietu, naszych lokalizacjach i pielęgnacji kwiatów.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="lotnisko-kwiatomat-terminal-c.jpg" alt="Kwiatomat Betanika w Terminalu C na Katowice Airport" loading="lazy">
+          <div class="blog-card-copy">
+            <span class="kicker">Katowice Airport</span>
+            <h3>Kwiaty 24/7 w Terminalu C</h3>
+            <p>Gdzie znaleźć kwiatomat i jak szybko kupić bukiet po przylocie lub przed powitaniem bliskiej osoby.</p>
+            <a href="blog/kwiaty-katowice-airport-terminal-c/">Czytaj poradnik</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="hero.jpeg" alt="Kwiatomat Betanika w Siemianowicach Śląskich" loading="lazy">
+          <div class="blog-card-copy">
+            <span class="kicker">Siemianowice Śląskie</span>
+            <h3>Bukiet na ostatnią chwilę</h3>
+            <p>Jak działa całodobowy kwiatomat przy ul. Śląskiej 45 i kiedy jest szczególnie przydatny.</p>
+            <a href="blog/kwiaty-na-ostatnia-chwile-siemianowice-slaskie/">Czytaj poradnik</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="lotnisko-bukiet-slonecznik-jasne-tlo.jpg" alt="Kolorowy bukiet ze słonecznikiem z kwiatomatu Betanika" loading="lazy">
+          <div class="blog-card-copy">
+            <span class="kicker">Pielęgnacja</span>
+            <h3>Jak przedłużyć świeżość bukietu?</h3>
+            <p>Proste czynności po zakupie, dzięki którym kompozycja dłużej zachowa dobry wygląd.</p>
+            <a href="blog/jak-dbac-o-bukiet-z-kwiatomatu/">Czytaj poradnik</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img src="lotnisko-kwiatomat-front.jpg" alt="Kwiatomat K9 PRO firmy Eldrut używany przez Betanikę" loading="lazy">
+          <div class="blog-card-copy">
+            <span class="kicker">Technologia i świeżość</span>
+            <h3>Dlaczego wybraliśmy K9 PRO?</h3>
+            <p>Jak kontrolowane warunki w kwiatomacie Eldrut pomagają chronić bukiety i zapewniają wygodny zakup przez całą dobę.</p>
+            <a href="blog/kwiatomat-k9-pro-eldrut-dlaczego-kwiaty-sa-bezpieczne/">Poznaj kwiatomat</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="location" id="lokalizacja">
     <div class="container location-grid">
-      <div class="location-copy">
-        <span class="kicker">Lokalizacja</span>
-        <h2>Znajdź Betanikę</h2>
-
-        <div class="address">
-          ul. Śląska 45<br>
-          Siemianowice Śląskie
-        </div>
-
-        <p class="open247">Kwiatomat dostępny 24/7</p>
-
-        <div class="actions" style="justify-content:flex-start">
-          <a class="btn btn-light"
-             href="https://www.google.com/maps/search/?api=1&query=Śląska+45,+Siemianowice+Śląskie"
-             target="_blank" rel="noopener">
-            Prowadź mnie
-          </a>
-          <a class="btn btn-ghost" href="tel:+48516607478">516 607 478</a>
-        </div>
+      <div class="location-head">
+        <span class="kicker">Lokalizacje</span>
+        <h2>Znajdź najbliższą Betanikę</h2>
       </div>
 
-      <div class="map">
-        <iframe
-          title="Mapa - Betanika, ul. Śląska 45, Siemianowice Śląskie"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Śląska%2045%2C%20Siemianowice%20Śląskie&output=embed">
-        </iframe>
-      </div>
+      <article class="location-card">
+        <div class="location-copy">
+          <div class="address">
+            <strong>Siemianowice Śląskie</strong><br>
+            ul. Śląska 45
+          </div>
+          <p class="open247">Kwiatomat dostępny 24/7</p>
+          <div class="actions" style="justify-content:flex-start">
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Śląska+45,+Siemianowice+Śląskie" target="_blank" rel="noopener">Prowadź mnie</a>
+            <a class="btn btn-ghost" href="tel:+48780717944">780 717 944</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Mapa - Betanika, ul. Śląska 45, Siemianowice Śląskie" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Śląska%2045%2C%20Siemianowice%20Śląskie&output=embed"></iframe>
+        </div>
+      </article>
+
+      <article class="location-card">
+        <div class="location-copy">
+          <span class="new-location">Nowa lokalizacja</span>
+          <div class="address">
+            <strong>Katowice Airport – Pyrzowice</strong><br>
+            Terminal C · hala przylotów
+          </div>
+          <p class="open247">Kwiatomat dostępny 24/7<br>ul. Wolności 90, 42-625 Ożarowice</p>
+          <div class="actions" style="justify-content:flex-start">
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Katowice+Airport+Terminal+C,+Wolności+90,+Ożarowice" target="_blank" rel="noopener">Prowadź mnie</a>
+            <a class="btn btn-ghost" href="tel:+48780717944">780 717 944</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Mapa - Betanika, Katowice Airport, Terminal C" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Katowice%20Airport%20Terminal%20C%2C%20Wolności%2090%2C%20Ożarowice&output=embed"></iframe>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -649,25 +879,34 @@
         <h2>Masz pytanie?</h2>
       </div>
 
-      <a class="phone" href="tel:+48516607478">516 607 478</a>
-      <p class="fb">Facebook: <strong>Betanika - Kwiatomaty 24/7</strong></p>
+      <a class="phone" href="tel:+48780717944">780 717 944</a>
+      <div class="social-links" aria-label="Profile Betaniki w mediach społecznościowych">
+        <a class="social-link" href="https://www.facebook.com/betanika.kwiatomaty/" target="_blank" rel="noopener" aria-label="Betanika na Facebooku">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.25 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.23.2 2.23.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.91h-2.34V22C18.34 21.25 22 17.08 22 12.06Z"/></svg>
+          Facebook
+        </a>
+        <a class="social-link" href="https://www.instagram.com/betanika.kwiatomaty/" target="_blank" rel="noopener" aria-label="Betanika na Instagramie">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.81 5.81 0 0 1 22 7.8v8.4a5.81 5.81 0 0 1-5.8 5.8H7.8A5.81 5.81 0 0 1 2 16.2V7.8A5.81 5.81 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          Instagram
+        </a>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Betanika · Kwiatomat 24/7 · Siemianowice Śląskie
+    © 2026 Betanika · Kwiatomaty 24/7 · Siemianowice Śląskie i Katowice Airport
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/betanika.kwiatomaty/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/betanika.kwiatomaty/" target="_blank" rel="noopener">Instagram</a>
+    </div>
   </footer>
 
   <div class="mobile-bar" aria-label="Szybki kontakt">
-    <a class="call" href="tel:+48516607478">Zadzwoń</a>
-    <a class="route"
-       href="https://www.google.com/maps/search/?api=1&query=Śląska+45,+Siemianowice+Śląskie"
-       target="_blank" rel="noopener">
-      Trasa
-    </a>
+    <a class="call" href="tel:+48780717944">Zadzwoń</a>
+    <a class="route" href="#lokalizacja">Lokalizacje</a>
   </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie bukietu" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Zamknij">×</button>
     <img id="lightboxImg" src="" alt="">
   </div>
@@ -676,14 +915,17 @@
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightboxImg");
     const closeBtn = document.querySelector(".lightbox-close");
+    let lastLightboxTrigger = null;
 
     document.querySelectorAll(".gallery button").forEach(button => {
       button.addEventListener("click", () => {
         const img = button.querySelector("img");
+        lastLightboxTrigger = button;
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
         lightbox.classList.add("open");
         lightbox.setAttribute("aria-hidden", "false");
+        closeBtn.focus();
       });
     });
 
@@ -691,6 +933,8 @@
       lightbox.classList.remove("open");
       lightbox.setAttribute("aria-hidden", "true");
       lightboxImg.src = "";
+      if(lastLightboxTrigger) lastLightboxTrigger.focus();
+      lastLightboxTrigger = null;
     }
 
     closeBtn.addEventListener("click", closeLightbox);
@@ -700,7 +944,7 @@
     });
 
     document.addEventListener("keydown", event => {
-      if(event.key === "Escape") closeLightbox();
+      if(event.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
     });
   </script>
 
