@@ -32,7 +32,7 @@
     "department": [
       {
         "@type": "Florist",
-        "name": "Betanika Kwiatomat 24/7 – Siemianowice Śląskie",
+        "name": "Betanika Kwiatomat 24/7 – Siemianowice Śląskie – Centrum",
         "telephone": "+48 780 717 944",
         "address": {
           "@type": "PostalAddress",
@@ -135,10 +135,10 @@
       position:relative;
       display:grid;
       place-items:center;
-      padding:110px 20px 60px;
+      padding:94px 20px 64px;
       text-align:center;
       background:
-        linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.64)),
+        linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.72)),
         url("kwiatomat-tlo.jpg") center/cover no-repeat;
     }
     .hero::after{
@@ -152,14 +152,14 @@
     .hero-content{
       position:relative;
       z-index:2;
-      max-width:900px;
+      width:min(1060px,100%);
       color:#fff;
     }
     .logo-card{
-      width:190px;
-      height:190px;
-      margin:0 auto 28px;
-      padding:12px;
+      width:128px;
+      height:128px;
+      margin:0 auto 18px;
+      padding:9px;
       border-radius:50%;
       background:rgba(255,255,255,.95);
       box-shadow:var(--shadow);
@@ -172,30 +172,112 @@
     }
     .eyebrow{
       display:inline-block;
-      margin-bottom:14px;
+      margin-bottom:16px;
+      padding:7px 13px;
+      border:1px solid rgba(255,255,255,.34);
+      border-radius:999px;
+      background:rgba(0,0,0,.18);
       font-size:12px;
       font-weight:700;
-      letter-spacing:3px;
+      letter-spacing:2.4px;
       text-transform:uppercase;
       opacity:.92;
     }
     .hero h1{
       font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(44px,7vw,84px);
-      line-height:1.00;
+      font-size:clamp(42px,6vw,70px);
+      line-height:1.02;
       font-weight:400;
       text-wrap:balance;
     }
+    .hero h1 strong{
+      color:#fff4c7;
+      font-weight:400;
+      white-space:nowrap;
+    }
     .hero-lead{
       max-width:720px;
-      margin:24px auto 8px;
-      font-size:clamp(18px,2vw,23px);
+      margin:18px auto 24px;
+      font-size:clamp(18px,2vw,22px);
       color:rgba(255,255,255,.94);
     }
-    .hero-address{
-      margin:0 auto 30px;
+    .hero-locations{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      width:min(960px,100%);
+      margin:0 auto;
+      text-align:left;
+    }
+    .hero-location-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:190px;
+      padding:24px 26px 22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.72);
+      border-radius:24px;
+      color:var(--ink);
+      background:rgba(255,255,255,.94);
+      box-shadow:0 18px 48px rgba(0,0,0,.24);
+      text-decoration:none;
+      backdrop-filter:blur(10px);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .hero-location-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 22px 54px rgba(0,0,0,.30);
+    }
+    .hero-location-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:15px;
+    }
+    .hero-location-type{
+      color:#6d655d;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:2.1px;
+      text-transform:uppercase;
+    }
+    .hero-location-open{
+      display:inline-flex;
+      align-items:center;
+      min-height:31px;
+      padding:0 11px;
+      border-radius:999px;
+      color:#fff;
+      background:#1c1c1c;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.4px;
+    }
+    .hero-location-card h2{
+      max-width:400px;
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(24px,2.5vw,30px);
+      font-weight:400;
+      line-height:1.08;
+      text-wrap:balance;
+    }
+    .hero-location-address{
+      margin:10px 0 20px;
+      color:#625c56;
       font-size:15px;
-      color:rgba(255,255,255,.78);
+    }
+    .hero-location-address strong{
+      color:var(--ink);
+      font-size:16px;
+    }
+    .hero-location-cta{
+      margin-top:auto;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.2px;
     }
 
     .actions{
@@ -593,8 +675,10 @@
     @media(max-width:820px){
       .navlinks a:not(.navcall){display:none}
       .topbar{height:62px}
-      .logo-card{width:145px;height:145px}
-      .hero{padding-top:92px}
+      .logo-card{width:104px;height:104px;margin-bottom:14px}
+      .hero{min-height:auto;padding:82px 18px 54px}
+      .hero-locations{grid-template-columns:1fr;max-width:620px;gap:12px}
+      .hero-location-card{min-height:0;padding:20px 21px 18px;border-radius:20px}
       section{padding:70px 18px}
       .steps{grid-template-columns:1fr}
       .spotlight-card{grid-template-columns:1fr}
@@ -637,8 +721,18 @@
     }
 
     @media(max-width:460px){
-      .hero h1{font-size:44px}
-      .hero-lead{font-size:18px}
+      .hero{padding:72px 14px 96px}
+      .logo-card{width:84px;height:84px;margin-bottom:10px;padding:6px}
+      .hero h1{font-size:34px}
+      .hero-lead{margin:10px auto 14px;font-size:15.5px}
+      .eyebrow{margin-bottom:10px;padding:5px 9px;font-size:9px;letter-spacing:1.45px}
+      .hero-locations{gap:10px}
+      .hero-location-card{padding:16px 18px 14px;border-radius:18px}
+      .hero-location-top{margin-bottom:10px}
+      .hero-location-card h2{font-size:22px}
+      .hero-location-address{margin:7px 0 12px;font-size:14px}
+      .hero-location-address strong{font-size:15px}
+      .hero-location-cta{font-size:13px}
       .btn{width:100%;max-width:310px}
       .gallery{grid-template-columns:1fr 1fr}
       .spotlight-photo{min-height:330px}
@@ -667,19 +761,33 @@
         <img src="logo.jpeg" alt="Logo Betanika">
       </div>
 
-      <span class="eyebrow">Kwiatomaty 24/7 · Dwie lokalizacje</span>
-      <h1>Kwiaty wtedy,<br>kiedy ich potrzebujesz.</h1>
+      <span class="eyebrow">Świeże bukiety · 24 godziny na dobę</span>
+      <h1>Kwiatomaty Betanika <strong>24/7</strong></h1>
 
       <p class="hero-lead">
-        Gotowe bukiety dostępne przez całą dobę — na ważną okazję,
-        prezent albo po prostu bez okazji.
+        Wybierz kwiatomat najbliżej Ciebie.
       </p>
 
-      <p class="hero-address">Siemianowice Śląskie · Katowice Airport, Pyrzowice</p>
+      <div class="hero-locations" aria-label="Lokalizacje kwiatomatów Betanika">
+        <a class="hero-location-card" href="#siemianowice">
+          <div class="hero-location-top">
+            <span class="hero-location-type">Lokalizacja 01</span>
+            <span class="hero-location-open">24/7</span>
+          </div>
+          <h2>Kwiatomat Siemianowice Śląskie – Centrum</h2>
+          <p class="hero-location-address"><strong>ul. Śląska 45</strong></p>
+          <span class="hero-location-cta">Zobacz adres i mapę →</span>
+        </a>
 
-      <div class="actions">
-        <a class="btn btn-light" href="#lokalizacja">Zobacz lokalizacje</a>
-        <a class="btn btn-ghost" href="tel:+48780717944">Zadzwoń</a>
+        <a class="hero-location-card" href="#pyrzowice">
+          <div class="hero-location-top">
+            <span class="hero-location-type">Lokalizacja 02</span>
+            <span class="hero-location-open">24/7</span>
+          </div>
+          <h2>Kwiatomat Katowice Airport – Pyrzowice</h2>
+          <p class="hero-location-address">Terminal C · hala przylotów</p>
+          <span class="hero-location-cta">Zobacz adres i mapę →</span>
+        </a>
       </div>
     </div>
   </header>
@@ -723,7 +831,7 @@
         <div class="spotlight-photo" role="img" aria-label="Kwiatomat Betanika w Terminalu C na Katowice Airport"></div>
         <div class="spotlight-copy">
           <span>Nowość · Katowice Airport</span>
-          <h2>Dwa kwiatomaty. Zawsze pod ręką.</h2>
+          <h2>Kwiatomaty. Zawsze pod ręką.</h2>
           <p>
             Betanikę znajdziesz teraz także w Terminalu C, w hali przylotów.
             Wybierz bukiet od razu po przylocie lub gdy czekasz na bliską osobę.
@@ -838,10 +946,10 @@
         <h2>Znajdź najbliższą Betanikę</h2>
       </div>
 
-      <article class="location-card">
+      <article class="location-card" id="siemianowice">
         <div class="location-copy">
           <div class="address">
-            <strong>Siemianowice Śląskie</strong><br>
+            <strong>Siemianowice Śląskie – Centrum</strong><br>
             ul. Śląska 45
           </div>
           <p class="open247">Kwiatomat dostępny 24/7</p>
@@ -855,7 +963,7 @@
         </div>
       </article>
 
-      <article class="location-card">
+      <article class="location-card" id="pyrzowice">
         <div class="location-copy">
           <span class="new-location">Nowa lokalizacja</span>
           <div class="address">
